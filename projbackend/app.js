@@ -39,7 +39,7 @@ app.use("/api", orderRoutes);
 
 //PORT
 const port = process.env.PORT || 8000;
-
+const uri = process.env.MONGODB_URI;
 //Starting a server
 app.listen(port, () => {
   console.log(`app is running at ${port}`);
