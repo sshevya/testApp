@@ -13,6 +13,7 @@ const userRoutes = require("./routes/user");
 const categoryRoutes = require("./routes/category");
 const productRoutes = require("./routes/product");
 const orderRoutes = require("./routes/order");
+const uri = process.env.MONGODB_URI;
 
 //DB Connection
 mongoose
@@ -39,7 +40,6 @@ app.use("/api", orderRoutes);
 
 //PORT
 const port = process.env.PORT || 8000;
-const uri = process.env.MONGODB_URI;
 //Starting a server
 app.listen(port, () => {
   console.log(`app is running at ${port}`);
